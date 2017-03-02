@@ -22,9 +22,8 @@
     </div><!-- /.container -->
       <div class="container">
         <blockquote class="blockquote2">
-          <h3>Bienvenido(a): </h3>
+          <h3 id="bienvenido" >Bienvenido(a): </h3>
         </blockquote>        
-        <p class = "blockquote2" id="bienvenido"></p>
       </div>
       <div class="container">
   <div class="row">
@@ -60,10 +59,10 @@
    <script src="js/jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
     <script>
-            var name = localStorage.getItem("Nombre");
-            document.addEventListener('DOMContentLoaded', function(){
-            document.getElementById("bienvenido").innerHTML = name;
-          }, false);
-      </script>
+      var name = localStorage.getItem("Nombre");
+      document.addEventListener('DOMContentLoaded', function(){
+        document.getElementById("bienvenido").innerHTML += name;
+      }, false);
+    </script>
   </body>
 </html>
