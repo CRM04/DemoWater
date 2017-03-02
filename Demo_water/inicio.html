@@ -20,7 +20,10 @@
     <div class="container">   
         <center><img src="img/logo.png"></center>
     </div><!-- /.container -->
-      
+      <div class="container">
+            Bienvenido(a): 
+            <p id="bienvenido"></p>
+      </div>
       <div class="container">
   <div class="row">
     <div class="col">
@@ -54,5 +57,11 @@
     ================================================== -->
    <script src="js/jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
+    <script>
+            var name = localStorage.getItem("Nombre");
+            document.addEventListener('DOMContentLoaded', function(){
+            document.getElementById("bienvenido").innerHTML = name;
+          }, false);
+      </script>
   </body>
 </html>
