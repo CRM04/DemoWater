@@ -2,11 +2,6 @@ body {
     background-image: url("../img/FondoAlquimia.jpg");
 }
 
-.blockquote2 {
-  padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  border-left: 0.25rem solid orange;
-  color:white
+#Btnlogin{
+    background-color: #187e8f;   
 }
-
