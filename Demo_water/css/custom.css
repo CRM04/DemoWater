@@ -13,3 +13,7 @@ body {
 #Btnlogin{
   background-color: #187e8f;
 }
+
+#map{
+  height: 50%;
+}
