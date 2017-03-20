@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>Geolocation</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">	
+    <script type="text/javascript" src="cordova.js"></script>	
     <meta charset="utf-8">
     <style>
       html, body {
@@ -37,7 +38,7 @@ function initMap() {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
-
+		alert(pos);
       infoWindow.setPosition(pos);
       infoWindow.setContent('Location found.');
       map.setCenter(pos);
@@ -60,8 +61,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
         
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCk1tWZ_Y63MrlDHCxhkzx9PWFGO-ng2MQ&callback=initMap"
-        async defer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqijYphOzkbL8xff2gS9N7xIsMZ_aLGL0&callback=initMap">
     </script>
   </body>
 </html>

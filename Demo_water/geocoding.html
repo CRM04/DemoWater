@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqijYphOzkbL8xff2gS9N7xIsMZ_aLGL0"></script>
+		<script src= "js/jquery.min.js"></script>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<center><h2>Dirección</h2></center>
+		<div class="container">
+			<div class="form-group row">
+				<label for="lblCaller" class="col-2 col-form-label">Calle</label>
+				<div class="col-10">
+					<input class="form-control" type="text" id="Calle">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="lblNumExt" class="col-2 col-form-label">Número Ext</label>
+				<div class="col-10">
+					<input class="form-control" type="text" id="NumExt">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="lblNumInt" class="col-2 col-form-label">Número Int</label>
+				<div class="col-10">
+					<input class="form-control" type="text" id="NumInt">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="lblColonia" class="col-2 col-form-label">Colonia</label>
+				<div class="col-10">
+					<input class="form-control" type="text" id="Colonia">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="lblCP" class="col-2 col-form-label">Código Postal</label>
+				<div class="col-10">
+					<input class="form-control" type="text" id="CP">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="lblMunicipio" class="col-2 col-form-label">Municipio</label>
+				<div class="col-10">
+					<input class="form-control" type="text" id="Municipio">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="lblEstado" class="col-2 col-form-label">Estado</label>
+				<div class="col-10">
+					<input class="form-control" type="text" id="Estado">
+				</div>
+			</div>
+		</div>
+		<script>
+				function geocoding(){
+					var geocoder = new google.maps.Geocoder;			 						
+					var latlng = {lat:19.5295813, lng: -96.9153021};
+					geocoder.geocode({'location': latlng}, function(results, status) {
+						if (status === google.maps.GeocoderStatus.OK) {
+						if (results[0]) {							
+							console.log(results[0].formatted_address);
+							alert(results[0].formatted_address);
+						} else {
+							window.alert('No results found');
+						}
+						} else {
+						window.alert('Geocoder failed due to: ' + status);
+						}
+					});
+			}
+		</script>
+		<button onclick="geocoding()">Mandar</button>	
+	</body>	
+</html>	

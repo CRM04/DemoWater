@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Geolocalizacion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <h2>Geolocalizacion</h2>
+        <script type="text/javascript">
+          app.initialize();
+            var map;
+            document.addEventListener("deviceready", function() {
+            var div = document.getElementById("map_canvas");
+
+            // Initialize the map view
+            map = plugin.google.maps.Map.getMap(div);
+
+            // Wait until the map is ready status.
+            map.on(plugin.google.maps.event.MAP_READY, function(){
+
+            });
+            });
+
+            function onMapReady() {
+            var button = document.getElementById("button");
+            button.addEventListener("click", onBtnClicked, false);
+            }
+
+            function onBtnClicked() {
+            map.showDialog();
+            }
+    </script>
+  </head>
+  <body>
+    <h3>PhoneGap-GoogleMaps-Plugin</h3>
+    <div style="width:100%;height:400px" id="map_canvas">		
+	</div>
+    <button id="button">Full Screen</button>
+  </body>
+</html>

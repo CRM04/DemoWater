@@ -13,3 +13,9 @@ cordova prepare
 
 Plugin para Networking.
 cordova plugin add cordova-plugin-network-information
+
+Cordova maps
+cordova plugin add cordova-plugin-geolocation
+
+Cordova maps Google
+plugin.google.maps 1.3.9
