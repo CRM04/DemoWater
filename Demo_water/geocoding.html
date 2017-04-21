@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqijYphOzkbL8xff2gS9N7xIsMZ_aLGL0"></script>
+		<script src= "js/jquery.min.js"></script>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href = "css/custom.css">
+		<script src="js/map.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-light" style="background-color: #187e8f;">
+            <a class="navbar-brand" href="#">
+                <img src="img/minialq.png" width="30" height="30" alt="">
+            </a>
+        </nav>
+		<br>
+
+		<blockquote class="blockquote2">
+                <h3>Dirección</h3>
+        </blockquote>
+
+		<div class="container">
+			<form id="datos">
+				<div class="form-group">
+					<label for="Calle">Calle</label>
+					<input type="text" class="form-control" id="Calle" placeholder="Ej: 20 de Noviembre">
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<div class="form-group">
+							<label for="numE">Número Ext.</label>
+							<input type="text" class="form-control" id="numE" placeholder="Ej: 20">
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="form-group">
+							<label for="numI">Número Int.</label>
+							<input type="text" class="form-control" id="numI" placeholder="Ej: 20">
+						</div>	
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="Colonia">Colonia</label>
+					<input type="text" class="form-control" id="Colonia" placeholder="Ej: Centro">
+				</div>
+				<div class="form-group">
+					<label for="CP">Código Postal</label>
+					<input type="text" class="form-control" id="CP" placeholder="Ej: 91000">
+				</div>
+				<div class="form-group">
+					<label for="Municipio">Municipio</label>
+					<input type="text" class="form-control" id="Municipio" placeholder="Ej: Xalapa">
+				</div>
+				<div class="form-group">
+					<label for="Estado">Estado</label>
+					<input type="text" class="form-control" id="Estado" placeholder="Ej: Veracruz">
+				</div>
+			</form>
+		</div>			
+		<script>
+			document.addEventListener('DOMContentLoaded', function(){ // funcion anonima                    
+				$('#myModal').modal('show');
+				geocoding();
+            }, false);
+
+			function geocoding(){
+				var geocoder = new google.maps.Geocoder;			 						
+				var latitude = parseFloat(localStorage.getItem("lat"));
+				var longitude = parseFloat(localStorage.getItem("long"));
+				var latlng = {lat:latitude,lng:longitude};
+				geocoder.geocode({'location': latlng}, function(results, status) {
+					if (status === google.maps.GeocoderStatus.OK) {
+						if (results[0]) {
+							console.log(results[0].address_components[1].long_name);
+							console.log(latitude+" - "+ longitude);							
+							document.getElementById("Calle").value = results[0].address_components[1].long_name;
+							document.getElementById("numE").value = results[0].address_components[0].long_name;
+							document.getElementById("Colonia").value = results[0].address_components[2].long_name;
+							document.getElementById("CP").value = results[0].address_components[8].long_name;
+							document.getElementById("Municipio").value = results[0].address_components[4].long_name;
+							document.getElementById("Estado").value = results[0].address_components[6].long_name;
+						} else {
+								alert('No results found');
+						}
+					} else {
+						alert('Geocoder failed due to: ' + status);
+						}
+					});
+				}	
+		</script>
+		<br>
+		<center><button type="button" class="btn btn-warning btn-lg">Mandar</button></center>		
+		<!--<button onclick="geocoding()">Mandar</button>	-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalConfir" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modalConfir">Verificación de datos</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				Verifica y corrige si es necesario la siguiente información.
+			</div>
+			<div class="modal-footer">				
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Entendido</button>
+			</div>
+			</div>
+		</div>
+		</div>		
+	</body>	
+</html>	
