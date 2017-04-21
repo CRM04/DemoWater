@@ -3,89 +3,44 @@
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="msapplication-tap-highlight" content="no" />        
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
         <script type="text/javascript" src="cordova.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqijYphOzkbL8xff2gS9N7xIsMZ_aLGL0&sensor=false">
-        </script>
-        <style>
-            #lat{
-                background-color: #FFFD63;
-                font-size: 2em;
-                font-weight: bold;
-                height: 40px;
-            }
-            #lon{
-                background-color: #C6FFFF;
-                font-size: 2em;
-                font-weight: bold;
-                height: 40px;
-            }
-            #map{
-                width: 99%;
-                height: 300px;
-            } 
-        </style>
-        <title>Hello World</title>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqijYphOzkbL8xff2gS9N7xIsMZ_aLGL0"></script>       
+        <script src="js/map.js"></script>
+        <link rel="stylesheet" type="text/css" href = "css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href = "css/custom.css">
+        <title>Ubicación</title>
     </head>
     <body>
+        <nav class="navbar navbar-light" style="background-color: #187e8f;">
+            <a class="navbar-brand" href="#">
+                <img src="img/minialq.png" width="30" height="30" alt="">
+            </a>
+        </nav>
+        <br>
         <div class="app">
-            <h1>Ejemplo geolocalizacion</h1>
-            <div id="datos" class="">
-                    <button onclick="getDatos();">get</button>
-               <div>
-                   Latitud:<br>
-                    <label id="lat"></label>
-               </div>
-               <div>
-                   Longitud: <br>
-                   <label id="lon"></label>
-               </div>
+            <blockquote class="blockquote2">
+                <h3>Ubicación</h3>
+            </blockquote>
+            <div id="datos" class="container">
+               <div id="map"></div>
             </div>
-            <div id="map">
-                
-            </div>
-            <pre></pre>
-            </pre>
-            </pre>
         </div>
-         <script>
-            document.addEventListener("deviceready",onDeviceReady,false);
-            function onDeviceReady(){
-                console.log("listo");   
+        <br>
+        <center>
+            <button type="button" class="btn btn-warning btn-lg" ><a href="geocoding.html">Continuar</a></button>
+        </center>
+        <style>
+            #map{
+                width: 100%;
+                height: 300px;
             }
-
-            function getDatos(){
-                navigator.geolocation.getCurrentPosition(onSuccess,onError,{maximunAge: 300000,timeout:10000, enableHighAccuracy:true});
-            }
-        
-            function onSuccess(position){
-                var latitud=document.getElementById("lat");
-                var longitud=document.getElementById("lon");
-                latitud.innerHTML=""+position.coords.latitude;
-                longitud.innerHTML=""+position.coords.longitude;
-                var coords= new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-
-                var opciones = {center: coords, zoom: 15, mapTypeId: google.maps.MapTypeId.ROADMAP};
-
-                var mapa = new google.maps.Map(document.getElementById("map"),opciones);
-
-                var marcador= new google.maps.Marker({
-                    position:coords,
-                    map: mapa,
-                    title: ":D",
-                    animation: google.maps.Animation.DROP
-                });
-
-            }
-
-            function onError(err){ 
-                console.log("codigo de err:"+err.code+"  msj="+err.message);
-            }            
+        </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){ // funcion anonima    
+                getDatos();
+            }, false);                          
         </script>
-        <button><a href="geocoding.html">GEOCODIFICACION</a></button>
-    
     </body>
 </html>

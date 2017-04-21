@@ -6,71 +6,111 @@
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqijYphOzkbL8xff2gS9N7xIsMZ_aLGL0"></script>
 		<script src= "js/jquery.min.js"></script>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href = "css/custom.css">
+		<script src="js/map.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<center><h2>Dirección</h2></center>
+		<nav class="navbar navbar-light" style="background-color: #187e8f;">
+            <a class="navbar-brand" href="#">
+                <img src="img/minialq.png" width="30" height="30" alt="">
+            </a>
+        </nav>
+		<br>
+
+		<blockquote class="blockquote2">
+                <h3>Dirección</h3>
+        </blockquote>
+
 		<div class="container">
-			<div class="form-group row">
-				<label for="lblCaller" class="col-2 col-form-label">Calle</label>
-				<div class="col-10">
-					<input class="form-control" type="text" id="Calle">
+			<form id="datos">
+				<div class="form-group">
+					<label for="Calle">Calle</label>
+					<input type="text" class="form-control" id="Calle" placeholder="Ej: 20 de Noviembre">
 				</div>
-			</div>
-			<div class="form-group row">
-				<label for="lblNumExt" class="col-2 col-form-label">Número Ext</label>
-				<div class="col-10">
-					<input class="form-control" type="text" id="NumExt">
+				<div class="row">
+					<div class="col-6">
+						<div class="form-group">
+							<label for="numE">Número Ext.</label>
+							<input type="text" class="form-control" id="numE" placeholder="Ej: 20">
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="form-group">
+							<label for="numI">Número Int.</label>
+							<input type="text" class="form-control" id="numI" placeholder="Ej: 20">
+						</div>	
+					</div>
 				</div>
-			</div>
-			<div class="form-group row">
-				<label for="lblNumInt" class="col-2 col-form-label">Número Int</label>
-				<div class="col-10">
-					<input class="form-control" type="text" id="NumInt">
+				<div class="form-group">
+					<label for="Colonia">Colonia</label>
+					<input type="text" class="form-control" id="Colonia" placeholder="Ej: Centro">
 				</div>
-			</div>
-			<div class="form-group row">
-				<label for="lblColonia" class="col-2 col-form-label">Colonia</label>
-				<div class="col-10">
-					<input class="form-control" type="text" id="Colonia">
+				<div class="form-group">
+					<label for="CP">Código Postal</label>
+					<input type="text" class="form-control" id="CP" placeholder="Ej: 91000">
 				</div>
-			</div>
-			<div class="form-group row">
-				<label for="lblCP" class="col-2 col-form-label">Código Postal</label>
-				<div class="col-10">
-					<input class="form-control" type="text" id="CP">
+				<div class="form-group">
+					<label for="Municipio">Municipio</label>
+					<input type="text" class="form-control" id="Municipio" placeholder="Ej: Xalapa">
 				</div>
-			</div>
-			<div class="form-group row">
-				<label for="lblMunicipio" class="col-2 col-form-label">Municipio</label>
-				<div class="col-10">
-					<input class="form-control" type="text" id="Municipio">
+				<div class="form-group">
+					<label for="Estado">Estado</label>
+					<input type="text" class="form-control" id="Estado" placeholder="Ej: Veracruz">
 				</div>
-			</div>
-			<div class="form-group row">
-				<label for="lblEstado" class="col-2 col-form-label">Estado</label>
-				<div class="col-10">
-					<input class="form-control" type="text" id="Estado">
-				</div>
-			</div>
-		</div>
+			</form>
+		</div>			
 		<script>
-				function geocoding(){
-					var geocoder = new google.maps.Geocoder;			 						
-					var latlng = {lat:19.5295813, lng: -96.9153021};
-					geocoder.geocode({'location': latlng}, function(results, status) {
-						if (status === google.maps.GeocoderStatus.OK) {
-						if (results[0]) {							
-							console.log(results[0].formatted_address);
-							alert(results[0].formatted_address);
+			document.addEventListener('DOMContentLoaded', function(){ // funcion anonima                    
+				$('#myModal').modal('show');
+				geocoding();
+            }, false);
+
+			function geocoding(){
+				var geocoder = new google.maps.Geocoder;			 						
+				var latitude = parseFloat(localStorage.getItem("lat"));
+				var longitude = parseFloat(localStorage.getItem("long"));
+				var latlng = {lat:latitude,lng:longitude};
+				geocoder.geocode({'location': latlng}, function(results, status) {
+					if (status === google.maps.GeocoderStatus.OK) {
+						if (results[0]) {
+							console.log(results[0].address_components[1].long_name);
+							console.log(latitude+" - "+ longitude);							
+							document.getElementById("Calle").value = results[0].address_components[1].long_name;
+							document.getElementById("numE").value = results[0].address_components[0].long_name;
+							document.getElementById("Colonia").value = results[0].address_components[2].long_name;
+							document.getElementById("CP").value = results[0].address_components[8].long_name;
+							document.getElementById("Municipio").value = results[0].address_components[4].long_name;
+							document.getElementById("Estado").value = results[0].address_components[6].long_name;
 						} else {
-							window.alert('No results found');
+								alert('No results found');
 						}
-						} else {
-						window.alert('Geocoder failed due to: ' + status);
+					} else {
+						alert('Geocoder failed due to: ' + status);
 						}
 					});
-			}
+				}	
 		</script>
-		<button onclick="geocoding()">Mandar</button>	
+		<br>
+		<center><button type="button" class="btn btn-warning btn-lg">Mandar</button></center>		
+		<!--<button onclick="geocoding()">Mandar</button>	-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalConfir" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modalConfir">Verificación de datos</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				Verifica y corrige si es necesario la siguiente información.
+			</div>
+			<div class="modal-footer">				
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Entendido</button>
+			</div>
+			</div>
+		</div>
+		</div>		
 	</body>	
 </html>	
