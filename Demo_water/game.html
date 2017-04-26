@@ -19,7 +19,7 @@
             <div class="col">
             </div>
             <div class="col-3">
-                <center><img class="img-fluid" src="img/game/up-arrow.png" style="margin-bottom: 30%; margin-top: 30%;"></center>
+                <center><img id="up" class="img-fluid" src="img/game/up-arrow.png" style="margin-bottom: 30%; margin-top: 30%;"></center>
             </div>
             <div class="col">                
             </div>            
@@ -28,22 +28,23 @@
     
     <div class="container">
          
-        <!--<div class="row">
+        <div class="row">
             <div class="col-3">
                 <br>
                 <img id = "izq" src="img/game/left-arrow.png" class="img-fluid" alt="Responsive image">
             </div>
-            <div class="col-6">
+            <div id="centro" class="col-6">
                 <center><img id= "1" src="img/game/glass.png" class="img-fluid" alt="Responsive image"></center>
                 <center><img id= "2" src="img/game/water.png" style="display:none" class="img-fluid" alt="Responsive image"></center>
+                <center><h1 id = "cantidad"  style="color:white">1</h1></center>
             </div>
             <div class="col-3">
                 <br>
                 <img id="der" src="img/game/right-arrow.png" class="img-fluid" alt="Responsive image">
             </div>
-        </div>-->
+        </div>
 
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <!--<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <img class="center-block img-fluid " src="img/game/glass.png" alt="First slide">
@@ -61,22 +62,23 @@
                 <span class="sr-only">Next</span>
             </a>
             </div>
+            -->
          <div class="row">
             <div class="col">
             </div>
             <div class="col-3">
-                <center><img class="img-fluid" src="img/game/down-arrow.png" style="margin-top: 30%"></center>
+                <center><img id="down" class="img-fluid" src="img/game/down-arrow.png" style="margin-top: 30%"></center>
             </div>
             <div class="col">                
             </div>            
         </div>
         <div class="row" style="margin-top: 10%">
-            <div class="col"></div>
             <div class="col-6">
                 <button type="button" class="btn btn-primary btn-lg btn-block">Okay</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block">Consultar</button>
             </div>
-            <div class="col"></div>
+            <div class="col-6">                
+                <button type="button" class="btn btn-secondary btn-lg btn-block">Consultar</button>
+            </div>            
         </div>
     </div>
     <script src="js/jquery.min.js"></script>
@@ -84,7 +86,13 @@
     <script>
         var total = 2;
         var actual = 1;
-      $(document).ready(function(){                        
+      $(document).ready(function(){
+
+          console.log("Listo");
+          $("#centro").width($("#centro").css("width"));
+          $("#centro").height($("#centro").css("height"));
+            console.log("proporciones creadas");
+
             $("#der").click(function(){
                 console.log("derecha click");
                 transicion();
@@ -94,6 +102,31 @@
                 console.log("izq click");
                 transicion();
             });
+
+            $("#up").click(function(){
+                var cantidad = parseInt(document.getElementById("cantidad").innerHTML);
+                console.log("cantidad: " + cantidad);
+                if(cantidad < 11){
+                    cantidad++;
+                }
+                document.getElementById("cantidad").innerHTML = cantidad;
+            });
+
+            $("#down").click(function(){
+                var cantidad = parseInt(document.getElementById("cantidad").innerHTML);
+                console.log("cantidad: " + cantidad);
+                if(cantidad > 1){
+                    cantidad --;
+                }
+                document.getElementById("cantidad").innerHTML = cantidad;
+                /*var names=[];
+                names[0]=prompt("New member name?");
+                names[1]=prompt("New member name2");
+                localStorage['names']=JSON.stringify(names);
+
+                var storedNames=JSON.parse(localStorage['names']);
+                console.log(storedNames);*/
+            });
         }); 
 
         function transicion(){                        
@@ -102,36 +135,16 @@
                 console.log("Set");
                 actual = 1;
             }else{
-                $("#"+actual.toString()).fadeOut(100);
+                $("#"+actual.toString()).fadeOut(200);
                 actual++;
                 if(actual > total){
                    console.log("Set");
                     actual = 1;
                 }   
                 console.log("actual- "+actual);
-                $("#"+actual.toString()).delay(100).fadeIn(100);
-            }
-                        
-            /*if(actual < total)
-            {
-                $("#"+actual.toString()).fadeIn(1000);   
-                console.log("actual: "+actual);                
-                console.log("actual1: "+actual);
-                $("#"+actual.toString()).fadeOut(1000);
-            }            
-            if(actual > total)
-            {
-                console.log("Mayor");
-                actual = 1;
-            }
-            actual++;*/
+                $("#"+actual.toString()).delay(200).fadeIn(200);
+            }                                    
         }
-    </script>    
-    
-    <!--
-    <div class="container">
-        <img src="img/game/moon.jpg" class="img-fluid" alt="Responsive image">         
-    </div>
-    -->
+    </script>
 </body>
 <html>
