@@ -1,6 +1,20 @@
 body {
-    background-image: url("../img/FondoAlquimia.jpg");
+/*    background-image: url("../img/FondoAlquimia.jpg");*/
 }
+
+
+#fondoimage {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+/*
+  background: 
+   url(../img/FondoAlquimia2.jpg) top center no-repeat;
+        background-attachment: fixed;
+*/
+}
+
 
 .blockquote2 {
   padding: 0.5rem 1rem;
@@ -11,7 +25,12 @@ body {
 }
 
 #Btnlogin{
-  background-color: #187e8f;
+  background-color: #3dbcc9;
+  border-color: #31b0d5;
+    border-radius: 200px 200px 200px 200px;
+-moz-border-radius: 200px 200px 200px 200px;
+-webkit-border-radius: 200px 200px 200px 200px;
+border: 0px solid #19fadc;
 }
 
 label{
