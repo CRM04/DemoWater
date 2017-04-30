@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+    <link rel="stylesheet" type="text/css" href = "css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href = "css/custom.css">
+  <meta name="msapplication-tap-highlight" content="no"/>
+  <title>Water</title>
+</head>
+<body>
+    <script src="js/jquery.min.js"></script>
+    <div class="container-fluid">
+        <img id="der" src="img/logo.png" class="img-fluid">
+    </div>
+    <script>
+        $(document).ready(function(){
+            
+            $('body').ripples({
+                resolution: 512,
+                dropRadius: 10, //px
+                perturbance: 0.04,
+                });
+        });
+    </script>        
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/jquery.ripples.js"></script>        
+</body>
+</html>
