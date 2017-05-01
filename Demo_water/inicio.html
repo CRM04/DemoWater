@@ -1,68 +1,68 @@
-
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Agua ALquimia</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-  </head>
-  <body>
-      
-<nav class="navbar navbar-light" style="background-color: #187e8f;">
-  <a class="navbar-brand" href="#">
-    <img src="img/minialq.png" width="30" height="30" alt="">
-  </a>
-</nav>
-      
-    <div class="container">   
-        <center><img src="img/logo.png"></center>
-    </div><!-- /.container -->
-      <div class="container">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light" style="background-color: #10263e ;">
+        <a class="navbar-brand" href="#">
+            <center><img src="img/logo.png" class="img-fluid" width="200px"></center>
+        </a>
+    </nav>
+
+    <!-- /.container -->
+    <div class="container">
         <blockquote class="blockquote2">
-          <h5 id="bienvenido" >Bienvenido(a): </h5>
-        </blockquote>        
-      </div>
-      <div class="container">
-  <div class="row">
-    <div class="col">
-        <button type="button" class="btn btn-outline-warning btn-block">Mis direcciones</button>
+            <h5 id="bienvenido">Bienvenido(a): </h5>
+        </blockquote>
     </div>
-    <div class="col">
-        <button type="button" class="btn btn-outline-warning btn-block"><a href="infoPersonal.html">Subscripción</a></button>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning btn-block"><img src="img/botella_alq.png"  height="86px"/><br><a href="pedido_unico.html">Pedido Unico</a></button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning btn-block"><img src="img/subscripcion.png"  height="86px"/><br><a href="infoPersonal.html">Subscripción</a></button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning btn-block"><img src="img/consumo.png"  height="86px"/><br><a href="game.html">Consumo dirario</a></button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning btn-block"><img src="img/newspaper.png"  height="86px"/><br><a href="noticias.html">Noticias</a></button>
+            </div>
+        </div>
+        <!--<br>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning btn-block">Mis direcciones</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning btn-block"><a href="meta.html">Prueba Efecto</a></button>
+            </div>
+        </div>-->
     </div>
-  </div>
- <br>    
-  <div class="row">
-    <div class="col">
-              <button type="button" class="btn btn-warning btn-block" ><a href="pedido_unico.html">Pedido Unico</a></button>
-    </div>
-    <div class="col">
-              <button type="button" class="btn btn-outline-warning btn-block"><a href="noticias.html">Noticias</a></button>
-    </div>
-  </div>
- <br>    
-  <div class="row">
-    <div class="col">
-              <button type="button" class="btn btn-outline-warning btn-block"><a href="game.html">Consumo dirario</a></button>
-    </div>
-    <div class="col">
-              <button type="button" class="btn btn-outline-warning btn-block"><a href="meta.html">Prueba Efecto</a></button>
-    </div>
-  </div>
-</div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-   <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-      var name = localStorage.getItem("Nombre");
-      document.addEventListener('DOMContentLoaded', function(){
-        document.getElementById("bienvenido").innerHTML += name;
-      }, false);
+        var name = localStorage.getItem("Nombre");
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById("bienvenido").innerHTML += name;
+        }, false);
     </script>
-  </body>
+</body>
+
 </html>
