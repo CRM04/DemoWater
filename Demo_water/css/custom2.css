@@ -1,0 +1,37 @@
+#fondoimage {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+/*
+  background: 
+   url(../img/FondoAlquimia2.jpg) top center no-repeat;
+        background-attachment: fixed;
+*/
+}
+
+
+.blockquote2 {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  border-left: 0.25rem solid orange;
+  color:white
+}
+
+#Btnlogin{
+  background-color: #3dbcc9;
+  border-color: #31b0d5;
+    border-radius: 200px 200px 200px 200px;
+-moz-border-radius: 200px 200px 200px 200px;
+-webkit-border-radius: 200px 200px 200px 200px;
+border: 0px solid #19fadc;
+}
+
+label{
+  color: white;
+}
+
+#map{
+  height: 50%;
+}
