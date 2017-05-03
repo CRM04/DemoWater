@@ -6,25 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
     <link rel="stylesheet" type="text/css" href = "css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href = "css/custom.css">
-  <meta name="msapplication-tap-highlight" content="no"/>
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+    <meta name="msapplication-tap-highlight" content="no"/>
   <title>Water</title>
 </head>
-<body>
-    <script src="js/jquery.min.js"></script>
-    <div class="container-fluid">
-        <img id="der" src="img/logo.png" class="img-fluid">
+<body>    
+    <nav class="navbar navbar-light" style="background-color: #187e8f;">
+        <a class="navbar-brand" href="#">
+            <img src="img/minialq.png" width="30" height="30">
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <blockquote class="blockquote2">
+                    <h3>Meta Diaria</h3>
+                </blockquote>
+            </div>
+        </div>
+        <div class="row" style="color:white">
+            <div class="col">
+                <center><h5>Faltan <strong>3 L </strong> agua para completar la meta de 5 L</h5></center>
+            </div>            
+            <!--<p>Faltan <strong>3 L </strong> agua para completar la meta de 5 L</p>>-->
+            <!--<h2>0</h2> <h2> L de </h2> <h2>0</h2> <h2> L  Cosumidos.</h2>-->
+        </div>
+        <!--<img src="img/logo.png" class="img-fluid">-->
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col"><canvas id="myChart"></canvas></div>
+            <div class="col-2"></div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <button type="button" id="BtnPeso"class="btn btn-link" style="color:white">Actualizar peso</button>
+            </div>
+        </footer>        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/Chart.js"></script>
+        <script src="js/sweetalert.min.js"></script>        
+        <script src="js/meta.js"></script>  
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.ripples.js"></script>
     </div>
-    <script>
-        $(document).ready(function(){
-            
-            $('body').ripples({
-                resolution: 512,
-                dropRadius: 10, //px
-                perturbance: 0.04,
-                });
-        });
-    </script>        
-    <script src="js/bootstrap.min.js"></script>    
-    <script src="js/jquery.ripples.js"></script>        
 </body>
 </html>
