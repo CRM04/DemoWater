@@ -8,14 +8,30 @@
     <link rel="stylesheet" type="text/css" href = "css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href = "css/custom.css">    
     <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
   <meta name="msapplication-tap-highlight" content="no"/>
   <title>Water</title>
 </head>
 <body>
+    <nav class="navbar navbar-light" style="background-color: #10263e ;">
+        <a class="navbar-brand" href="#">
+            <center><img src="img/logo.png" class="img-fluid" width="200px"></center>
+        </a>
+    </nav>    
     <div class="container">
-        <blockquote class="blockquote2" style=" margin-top: 10%;">
+        <div class="row">
+                <div class="col-1">
+                    <span style="color:white"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></span>
+                </div>
+                <div class="col">
+                    <blockquote class="blockquote2">
+                        <h3>Consumo diario</h3>
+                    </blockquote>
+                </div>
+            </div>
+        <!--<blockquote class="blockquote2" style=" margin-top: 10%;">
                     <h3>Consumo diario</h3>
-                </blockquote>    
+        </blockquote>    -->
         <div class="row">
             <div class="col">
             </div>
@@ -28,8 +44,7 @@
         </div>
     </div>
     
-    <div class="container">
-         
+    <div class="container">         
         <div class="row">
             <div class="col-3">
                 <br>
@@ -55,13 +70,9 @@
             </div>            
         </div>
         <div class="row" style="margin-top: 10%">
-            <div class="col-6">
+            <div class="col">
                 <!--<a class="btn btn-primary btn-lg btn-block" href="grafico.html" role="button">Okay</a>-->
                 <button id="agregar" class="btn btn-secondary btn-lg btn-block" type="button" >Agregar</button>
-            </div>
-            <div class="col-6">
-                <!--<a  class="btn btn-secondary btn-lg btn-block" href="grafico.html" role="button">Consultar</a>-->
-                <button id="consultar" class="btn btn-secondary btn-lg btn-block" type="button" >Consultar</button>
             </div>            
         </div>
     </div>

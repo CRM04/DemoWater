@@ -10,27 +10,35 @@
 		<script src="js/map.js"></script>
 		<script src="js/bootstrap.min.js"></script>
     	<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
 	</head>
 	<body>
-		<nav class="navbar navbar-light" style="background-color: #187e8f;">
-            <a class="navbar-brand" href="#">
-                <img src="img/minialq.png" width="30" height="30" alt="">
-            </a>
-        </nav>
+		<nav class="navbar navbar-light" style="background-color: #10263e ;">
+			<a class="navbar-brand" href="#">
+				<center><img src="img/logo.png" class="img-fluid" width="200px"></center>
+			</a>
+    	</nav>
 		<br>
 
-		<blockquote class="blockquote2">
-                <h3>Producto</h3>
-        </blockquote>
+		<div class="row">
+            <div class="col-1">
+                <span style="color:white"><i class="fa fa-arrow-left fa-2x" aria-hidden="true" ></i></span>
+            </div>
+            <div class="col">
+                <blockquote class="blockquote2">
+                    <h3>Productos</h3>
+                </blockquote>
+            </div>
+        </div>
 
-		<div class="container">
+		<!--<div class="container">
 			<form id="datos">
 				<div class="form-group">
 					<label for="Calle">Calle</label>
 					<input type="text" class="form-control" id="Calle" placeholder="Ej: 20 de Noviembre">
 				</div>				
 			</form>
-		</div>			
+		</div>			-->
 		<div class="container">  
 	        <div class="row">
 	            <div class="col">
@@ -81,8 +89,7 @@
 	    </div>
 
 
-		<br>
-		<center><button type="button" class="btn btn-warning btn-lg">Mandar</button></center>		
+		<br>		
 		<!--<button onclick="geocoding()">Mandar</button>	-->
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalConfir" aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -101,11 +108,7 @@
 			</div>
 			</div>
 		</div>
-		</div>	
-
-
-
-
+		</div>
 	<script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sweetalert.min.js"></script>

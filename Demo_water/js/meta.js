@@ -27,29 +27,26 @@
 
     var data = {
         labels: [
-            "Red",
-            "Blue",
-            "Yellow"
+            "Agua Consumida",
+            "Agua Restante"            
         ],
         datasets: [
             {
-                data: [300, 50, 100],
+                data: [200,100],
                 backgroundColor: [
-                    "#FF6384",
-                    "#36A2EB",
-                    "#FFCE56"
+                    "#3ebfcc",
+                    "#ef7f12"
                 ],
                 hoverBackgroundColor: [
-                    "#FF6384",
-                    "#36A2EB",
-                    "#FFCE56"
-                ]
+                    "#3ebfcc",
+                    "#ef7f12"
+                ]                
             }]
     };
 
     var myDoughnutChart = new Chart(ctx, {
         type: 'doughnut',
-        data: data,        
+        data: data        
     });
 
 

@@ -19,6 +19,13 @@
   color:white
 }
 
+.blockquote3 {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  border-left: 0.25rem solid orange;  
+}
+
 #Btnlogin{
   background-color: #3dbcc9;
   border-color: #31b0d5;

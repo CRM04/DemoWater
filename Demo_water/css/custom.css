@@ -1,6 +1,10 @@
 body {
     background-image: url("../img/FondoAlquimia.jpg");
 }
+#grafica{
+    background-color: white;
+}
+
 
 #fondoimage {
     position: absolute;
@@ -42,8 +46,4 @@ label {
 
 #map {
     height: 50%;
-}
-
-.carousel-inner>.item>img {
-    margin: 0 auto;
 }

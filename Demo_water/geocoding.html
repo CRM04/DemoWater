@@ -9,18 +9,30 @@
 		<link rel="stylesheet" href = "css/custom.css">
 		<script src="js/map.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
 	</head>
 	<body>
-		<nav class="navbar navbar-light" style="background-color: #187e8f;">
-            <a class="navbar-brand" href="#">
-                <img src="img/minialq.png" width="30" height="30" alt="">
-            </a>
-        </nav>
+		<nav class="navbar navbar-light" style="background-color: #10263e ;">
+			<a class="navbar-brand" href="#">
+				<center><img src="img/logo.png" class="img-fluid" width="200px"></center>
+			</a>
+		</nav>
 		<br>
 
-		<blockquote class="blockquote2">
+		 <div class="row">
+            <div class="col-1">
+                <span style="color:white"><i class="fa fa-arrow-left fa-2x" aria-hidden="true" ></i></span>
+            </div>
+            <div class="col">
+                <blockquote class="blockquote2">
+                    <h3>Dirección</h3>
+                </blockquote>
+            </div>
+        </div>
+		<!--<blockquote class="blockquote2">
                 <h3>Dirección</h3>
-        </blockquote>
+        </blockquote>-->
 
 		<div class="container">
 			<form id="datos">
@@ -59,10 +71,18 @@
 					<input type="text" class="form-control" id="Estado" placeholder="Ej: Veracruz">
 				</div>
 			</form>
-		</div>			
+			<br>
+			<div class="row">
+				<div class="col">
+					<a role="button" class="btn btn-outline-warning btn-block" href="selProducto.html">Continuar pedido</a> 
+				</div>
+			</div>
+			<br>
+		</div>
+		<script src="js/sweetalert.min.js"></script>	
 		<script>
 			document.addEventListener('DOMContentLoaded', function(){ // funcion anonima                    
-				$('#myModal').modal('show');
+				swal("Atención!", "Verifica que todos los datos esten correctos")
 				geocoding();
             }, false);
 
@@ -92,7 +112,8 @@
 				}	
 		</script>
 		<br>
-		<center><button type="button" class="btn btn-warning btn-lg">Mandar</button></center>		
+		<!--<center><button type="button" class="btn btn-warning btn-lg">Mandar</button></center>-->		
+		<br>   
 		<!--<button onclick="geocoding()">Mandar</button>	-->
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalConfir" aria-hidden="true">
 		<div class="modal-dialog" role="document">

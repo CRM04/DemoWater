@@ -61,8 +61,8 @@ $(document).ready(function(){
                     var temp = (250 * tempCantidad) / 1000;
                 }
                 swal({
-                    title: "¿Estas seguro?",
-                    text: "Se añadiran " +temp+ " L de agua a su registro del dia hoy.",
+                    title: "¿Estás seguro?",
+                    text: "Se añadirán " +temp+ " L de agua a su registro del día hoy.",
                     type: "info",
                     showCancelButton: true,
                     //confirmButtonColor: "#DD6B55",

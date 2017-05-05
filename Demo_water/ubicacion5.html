@@ -10,27 +10,36 @@
         <script src="js/map.js"></script>
         <link rel="stylesheet" type="text/css" href = "css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href = "css/custom.css">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
         <title>Ubicación</title>
     </head>
     <body>
-        <nav class="navbar navbar-light" style="background-color: #187e8f;">
+        <nav class="navbar navbar-light" style="background-color: #10263e ;">
             <a class="navbar-brand" href="#">
-                <img src="img/minialq.png" width="30" height="30" alt="">
+                <center><img src="img/logo.png" class="img-fluid" width="200px"></center>
             </a>
         </nav>
         <br>
         <div class="app">
-            <blockquote class="blockquote2">
-                <h3>Ubicación</h3>
-            </blockquote>
+            <div class="row">
+                <div class="col-1">
+                    <span style="color:white"><i class="fa fa-arrow-left fa-2x" aria-hidden="true" ></i></span>
+                </div>
+                <div class="col">
+                    <blockquote class="blockquote2">
+                        <h5>Ubicación</h5>
+                    </blockquote>
+                </div>
+            </div>
             <div id="datos" class="container">
                <div id="map"></div>
+               <br>
+               <a role="button" class="btn btn-outline-warning btn-block" href="geocoding.html">Continuar</a>    
             </div>
-        </div>
-        <br>
-        <center>
-            <button type="button" class="btn btn-warning btn-lg" ><a href="geocoding.html">Continuar</a></button>
-        </center>
+        </div>        
+        <!--<center>
+            <!--<button type="button" class="btn btn-warning btn-lg" ><a href="geocoding.html">Continuar</a></button>
+        </center>-->
         <style>
             #map{
                 width: 100%;
