@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />        
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
-        <script type="text/javascript" src="cordova.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqijYphOzkbL8xff2gS9N7xIsMZ_aLGL0"></script>       
-        <script src="js/map.js"></script>
-        <link rel="stylesheet" type="text/css" href = "css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href = "css/custom.css">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <title>Ubicación</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-light" style="background-color: #10263e ;">
-            <a class="navbar-brand" href="#">
-                <center><img src="img/logo.png" class="img-fluid" width="200px"></center>
-            </a>
-        </nav>
-        <br>
-        <div class="app">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqijYphOzkbL8xff2gS9N7xIsMZ_aLGL0"></script>
+    <script src="js/map.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <title>Ubicación</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: #10263e ;">
+        <a class="navbar-brand" href="#">
+            <center><img src="img/logo.png" class="img-fluid" width="200px"></center>
+        </a>
+    </nav>
+    <br>
+    <div class="app">
+        <div class="container">
             <div class="row">
                 <div class="col-1">
-                    <span style="color:white"><i class="fa fa-arrow-left fa-2x" aria-hidden="true" ></i></span>
+                    <a onclick="parent.location='pedido_unico.html'"><span style="color:white"><i class="fa fa-arrow-left fa-2x" aria-hidden="true" ></i></span></a>
                 </div>
                 <div class="col">
                     <blockquote class="blockquote2">
-                        <h5>Ubicación</h5>
+                        <h3>Ubicación</h3>
                     </blockquote>
                 </div>
             </div>
             <div id="datos" class="container">
-               <div id="map"></div>
-               <br>
-               <a role="button" class="btn btn-outline-warning btn-block" href="geocoding.html">Continuar</a>    
+                <div id="map"></div>
+                <br>
+                <a role="button" class="btn btn-outline-warning btn-block" href="geocoding.html">Continuar</a>
             </div>
-        </div>        
-        <!--<center>
-            <!--<button type="button" class="btn btn-warning btn-lg" ><a href="geocoding.html">Continuar</a></button>
-        </center>-->
-        <style>
-            #map{
-                width: 100%;
-                height: 300px;
-            }
-        </style>
-        <script>
-            document.addEventListener('DOMContentLoaded', function(){ // funcion anonima    
-                getDatos();
-            }, false);                          
-        </script>
-    </body>
+        </div>
+    </div>
+    <style>
+        #map {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() { // funcion anonima    
+            getDatos();
+        }, false);
+    </script>
+</body>
+
 </html>

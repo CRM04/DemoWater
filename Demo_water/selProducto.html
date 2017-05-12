@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqijYphOzkbL8xff2gS9N7xIsMZ_aLGL0"></script>
-		<script src= "js/jquery.min.js"></script>
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href = "css/custom.css">
-		<script src="js/map.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-    	<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
-		<link href="css/font-awesome.min.css" rel="stylesheet">
-	</head>
-	<body>
-		<nav class="navbar navbar-light" style="background-color: #10263e ;">
-			<a class="navbar-brand" href="#">
-				<center><img src="img/logo.png" class="img-fluid" width="200px"></center>
-			</a>
-    	</nav>
-		<br>
 
-		<div class="row">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqijYphOzkbL8xff2gS9N7xIsMZ_aLGL0"></script>
+    <script src="js/jquery.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/map.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: #10263e ;">
+        <a class="navbar-brand" href="#">
+            <center><img src="img/logo.png" class="img-fluid" width="200px"></center>
+        </a>
+    </nav>
+    <br>
+    <div class="container">
+        <div class="row">
             <div class="col-1">
-                <span style="color:white"><i class="fa fa-arrow-left fa-2x" aria-hidden="true" ></i></span>
+                <a onclick="parent.location='geocoding.html'"><span style="color:white"><i class="fa fa-arrow-left fa-2x" aria-hidden="true" ></i></span></a>
             </div>
             <div class="col">
                 <blockquote class="blockquote2">
@@ -30,8 +32,9 @@
                 </blockquote>
             </div>
         </div>
+    </div>
 
-		<!--<div class="container">
+    <!--<div class="container">
 			<form id="datos">
 				<div class="form-group">
 					<label for="Calle">Calle</label>
@@ -39,79 +42,82 @@
 				</div>				
 			</form>
 		</div>			-->
-		<div class="container">  
-	        <div class="row">
-	            <div class="col">
-	            </div>
-	            <div class="col-3">
-	                <center><img id="up" class="img-fluid" src="img/game/up-arrow.png" style="margin-bottom: 30%; margin-top: 30%;"></center>
-	                <!--<button id="reset" class="btn btn-secondary" type="button" >R</button>-->
-	            </div>
-	            <div class="col">                
-	            </div>            
-	        </div>
-	    </div>
-		<div class="container">
-	        <div class="row">
-	            <div class="col-3">
-	                <br>
-	                <img id = "izq" src="img/game/left-arrow.png" class="img-fluid" alt="Responsive image">
-	            </div>
-	            <div id="centro" class="col-6">
-	                <center><img id= "1" src="img/productos/garrafon.png" class="img-fluid" alt="Responsive image"></center>
-	                <center><img id= "2" src="img/productos/galon.png" style="display:none" class="img-fluid" alt="Responsive image"></center>
-	                <center><img id= "3" src="img/productos/1litro.png" style="display:none" class="img-fluid" alt="Responsive image"></center>
-	                <center><img id= "4" src="img/productos/1litroymedio.png" style="display:none" class="img-fluid" alt="Responsive image"></center>
-	                <center><img id= "5" src="img/productos/600.png" style="display:none" class="img-fluid" alt="Responsive image"></center>
-	                <center><h1 id = "cantidad"  style="color:white">1</h1></center>
-	            </div>
-	            <div class="col-3">
-	                <br>
-	                <img id="der" src="img/game/right-arrow.png" class="img-fluid" alt="Responsive image">
-	            </div>
-	        </div>
-	        <div class="row">
-	            <div class="col">
-	            </div>
-	            <div class="col-3">
-	                <center><img id="down" class="img-fluid" src="img/game/down-arrow.png" style="margin-top: 30%"></center>
-	            </div>
-	            <div class="col">                
-	            </div>            
-	        </div>
-	        <div class="row" style="margin-top: 10%">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-3">
+                <center><img id="up" class="img-fluid" src="img/game/up-arrow.png" style="margin-bottom: 30%; margin-top: 30%;"></center>
+                <!--<button id="reset" class="btn btn-secondary" type="button" >R</button>-->
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <br>
+                <img id="izq" src="img/game/left-arrow.png" class="img-fluid" alt="Responsive image">
+            </div>
+            <div id="centro" class="col-6">
+                <center><img id="1" src="img/productos/garrafon.png" class="img-fluid" alt="Responsive image"></center>
+                <center><img id="2" src="img/productos/galon.png" style="display:none" class="img-fluid" alt="Responsive image"></center>
+                <center><img id="3" src="img/productos/1litro.png" style="display:none" class="img-fluid" alt="Responsive image"></center>
+                <center><img id="4" src="img/productos/1litroymedio.png" style="display:none" class="img-fluid" alt="Responsive image"></center>
+                <center><img id="5" src="img/productos/600.png" style="display:none" class="img-fluid" alt="Responsive image"></center>
+                <center>
+                    <h1 id="cantidad" style="color:white">1</h1>
+                </center>
+            </div>
+            <div class="col-3">
+                <br>
+                <img id="der" src="img/game/right-arrow.png" class="img-fluid" alt="Responsive image">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-3">
+                <center><img id="down" class="img-fluid" src="img/game/down-arrow.png" style="margin-top: 30%"></center>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 10%">
             <div class="col-12">
                 <!--<a class="btn btn-primary btn-lg btn-block" href="grafico.html" role="button">Okay</a>-->
-                <button id="agregar" class="btn btn-secondary btn-lg btn-block" type="button" >Agregar</button>
-            </div>          
+                <button id="agregar" class="btn btn-secondary btn-lg btn-block" type="button">Agregar</button>
+            </div>
         </div>
 
-	    </div>
+    </div>
 
 
-		<br>		
-		<!--<button onclick="geocoding()">Mandar</button>	-->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalConfir" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="modalConfir">Verificación de datos</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <br>
+    <!--<button onclick="geocoding()">Mandar</button>	-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalConfir" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalConfir">Verificación de datos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 				</button>
-			</div>
-			<div class="modal-body">
-				Verifica y corrige si es necesario la siguiente información.
-			</div>
-			<div class="modal-footer">				
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Entendido</button>
-			</div>
-			</div>
-		</div>
-		</div>
-	<script src="js/jquery.min.js"></script>
+                </div>
+                <div class="modal-body">
+                    Verifica y corrige si es necesario la siguiente información.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sweetalert.min.js"></script>
-    <script src="js/selector.js"></script>  	
-	</body>	
-</html>	
+    <script src="js/selector.js"></script>
+</body>
+
+</html>

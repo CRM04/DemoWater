@@ -1,52 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="format-detection" content="telephone=no"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
-    <link rel="stylesheet" type="text/css" href = "css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href = "css/custom.css">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <meta name="msapplication-tap-highlight" content="no"/>
-  <title>Water</title>
+    <meta name="msapplication-tap-highlight" content="no" />
+    <title>Water</title>
 </head>
-<body>    
+
+<body>
     <nav class="navbar navbar-light" style="background-color: #10263e ;">
         <a class="navbar-brand" href="#">
             <center><img src="img/logo.png" class="img-fluid" width="200px"></center>
         </a>
     </nav>
-
     <div class="container">
-
-            <div class="row">
-                <div class="col-1">
-                    <span style="color:white"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></span>
-                </div>
-                <div class="col">
-                    <blockquote class="blockquote2">
-                        <h3>Meta Diaria</h3>
-                    </blockquote>
-                </div>
-                <div class="col">
-                    <br>
-                    <!--<button type="button" id="BtnPeso"class="btn btn-link" style="color:white">Actualizar peso</button>-->
-                    <button type="button" id="BtnPeso" class="btn btn-outline-warning">Actualizar peso</button>
-                </div>
+        <div class="row">
+            <div class="col-1">
+                <a onclick="parent.location='inicio.html'"> <span style="color:white"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></span></a>
             </div>
-                <!--
+            <div class="col">
                 <blockquote class="blockquote2">
                     <h3>Meta Diaria</h3>
-                </blockquote>-->        
+                </blockquote>
+            </div>
+            <div class="col">
+                <br>
+                <button type="button" id="BtnPeso" class="btn btn-outline-warning">Actualizar peso</button>
+            </div>
+        </div>
         <div class="row" style="color:white">
             <div class="col">
-                <center><h5>Faltan <strong>3 L </strong> agua para completar la meta de 5 L</h5></center>
-            </div>            
-            <!--<p>Faltan <strong>3 L </strong> agua para completar la meta de 5 L</p>>-->
-            <!--<h2>0</h2> <h2> L de </h2> <h2>0</h2> <h2> L  Cosumidos.</h2>-->
+                <center>
+                    <h5>Faltan <strong>3 L </strong> agua para completar la meta de 5 L</h5>
+                </center>
+            </div>
         </div>
-        <!--<img src="img/logo.png" class="img-fluid">-->
         <div class="row">
             <div class="col-2"></div>
             <div class="col"><canvas id="myChart"></canvas></div>
@@ -55,19 +49,19 @@
         <div class="row" style="margin-top: 10%">
             <div class="col-6">
                 <a class="btn btn-primary btn-lg btn-block" href="game.html" role="button">Agregar agua</a>
-                <!--<button id="agregar" class="btn btn-secondary btn-lg btn-block" type="button" >Agregar</button>-->
             </div>
             <div class="col-6">
-                <a  class="btn btn-secondary btn-lg btn-block" href="grafico.html" role="button">Consultar</a>
-               <!--<button id="consultar" class="btn btn-secondary btn-lg btn-block" type="button" >Consultar</button>-->
-            </div>            
-        </div>        
-        <script src="js/jquery.min.js"></script>
-        <script src="js/Chart.js"></script>
-        <script src="js/sweetalert.min.js"></script>        
-        <script src="js/meta.js"></script>  
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.ripples.js"></script>
+                <a class="btn btn-secondary btn-lg btn-block" href="grafico.html" role="button">Consultar</a>
+            </div>
+        </div>
     </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/meta.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.ripples.js"></script>
+
 </body>
+
 </html>
