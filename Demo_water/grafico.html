@@ -44,7 +44,9 @@
         </div>        -->
         <script>
         var datos = JSON.parse(localStorage['TotalAgua']);
+        console.log("Datos Agua: " + datos);
         var labels = JSON.parse(localStorage['fechas']);
+        console.log("Datos Fecha: " + labels);
         var ctx = document.getElementById("myChart");
         var data = {
             labels:  labels /*["January", "February", "March", "April", "May", "June", "July"]*/,

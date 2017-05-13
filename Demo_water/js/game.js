@@ -43,11 +43,11 @@ $(document).ready(function(){
                 window.location.href ="grafico.html";
             });
             
-            $("#reset").click(function(){
+            /*$("#reset").click(function(){
                 localStorage.removeItem("fechas");
                 localStorage.removeItem("TotalAgua");
                 alert("Reseteado");
-            });
+            });*/
             //Funcion del boton Agregar.
             $("#agregar").click(function(){
                 if(actual == 1)
@@ -58,7 +58,7 @@ $(document).ready(function(){
                 if(actual == 2)
                 {
                     var tempCantidad = document.getElementById("cantidad").innerHTML;
-                    var temp = (250 * tempCantidad) / 1000;
+                    var temp = (600 * tempCantidad) / 1000;
                 }
                 swal({
                     title: "¿Estás seguro?",
@@ -111,6 +111,7 @@ $(document).ready(function(){
                         //
                         var fechaNueva = new Array();
                         fechaNueva = JSON.parse(localStorage['fechas']);
+                        console.log("Fechas almacenadas: " + fechaNueva);
                         //Se busca que no exista la fecha actual.
                         var tamaño = fechaNueva.length;
                         //Se comprueba que el ultimo dia alla cambiado ya que debe ser una fecha diferente
@@ -118,7 +119,7 @@ $(document).ready(function(){
                             fechaNueva.push(hoy);
                             localStorage.setItem("fechas", JSON.stringify(fechaNueva));                            
                             tamaño ++;
-                        }                        
+                        }
                         AgregarAgua(cantidad, tamaño-1);
                         //console.log("Tipo:"+typeof(fechaNueva));
                         var test = JSON.parse(localStorage['fechas']);
@@ -129,14 +130,15 @@ $(document).ready(function(){
                         SaveFecha[0] = hoy;                        
                         //localStorage.setItem("fechas", JSON.stringify(SaveFecha));
                         localStorage['fechas']=JSON.stringify(SaveFecha);
-                        AgregarAgua(cantidad, 1);
+                        AgregarAgua(cantidad, 0);
                         console.log("se creo la variable localStorage");
-                        //alert("Primera fecha: " + localStorage.getItem("fechas"));
+                        console.log("Primera fecha: " + localStorage.getItem("fechas"));
                     }
         }
         
         //Funcion que se encargara de agregar el agua dentro de un arreglo.                
         function AgregarAgua(cantidadAgua, indice){
+            console.log("Indice - " +  indice);
             var localAgua = localStorage.getItem("TotalAgua");
                     if( localAgua != null && localAgua != "" && localAgua != false && localAgua != undefined){
                         //Si existe 
@@ -144,15 +146,24 @@ $(document).ready(function(){
                         var Agua = new Array();
                         Agua = JSON.parse(localStorage['TotalAgua']);
                         //Se busca que no exista la fecha actual.
+                        console.log("AguaStore: " + Agua);
                         var tamaño = Agua.length;
                         //Se comprueba que el ultimo dia alla cambiado ya que debe ser una fecha diferente                        
                         if(Agua[indice] == undefined){ //Significa que es la primera vez que toma el agua en un nuevo dia.
+                            console.log("Toma agua por primera vez - Cantidad " + cantidadAgua );
                             Agua[indice] = cantidadAgua;
                             localStorage.setItem("TotalAgua", JSON.stringify(Agua));
                         }else{
-                            var aguaTemp = parseInt(Agua[indice]);//Se obtiene el agua que ya se tenia almacenaada para luego sumarle la nueva y agregarla
-                            Agua[indice] = cantidadAgua + aguaTemp;
-                            localStorage.setItem("TotalAgua", JSON.stringify(Agua));
+                            var aguaTemp = parseInt(Agua[indice]);//Se obtiene el agua que ya se tenia almacenaada para luego sumarle la nueva y agregarla                            
+                            console.log("Agua en indice: " + Agua[indice]);
+                            console.log("Cantidad de agua: " + cantidadAgua);
+                            console.log("Tipo de Agua: " + typeof(Agua[indice]));
+                            console.log("Tipo de Cantidad: " + typeof( cantidadAgua));
+                            alert( cantidadAgua);
+                            console.log("Agua Temporal: " + aguaTemp);
+                            Agua[indice] = cantidadAgua + Agua[indice];
+                            console.log("Agua sumada: " + Agua);
+                            localStorage.setItem("TotalAgua", JSON.stringify(Agua));                            
                         }                                                
                         //console.log("Tipo:"+typeof(fechaNueva));
                         var testAgua = JSON.parse(localStorage['TotalAgua']);
@@ -165,18 +176,19 @@ $(document).ready(function(){
                         localStorage['TotalAgua']=JSON.stringify(SaveAgua);
                         console.log("se creo la variable localStorage de Agua");
                     }
+                    console.log("--------------------------------------------------------------------------");
         }
 
         function transicion(){                        
             console.log("actual "+actual);
             if(actual > total){
-                console.log("Set");
+                //console.log("Set");
                 actual = 1;
             }else{
                 $("#"+actual.toString()).fadeOut(200);
                 actual++;
                 if(actual > total){
-                   console.log("Set");
+                  // console.log("Set");
                     actual = 1;
                 }   
                 console.log("actual- "+actual);
