@@ -1,0 +1,66 @@
+<!DOCTYPE>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/custom.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: #10263e ;">
+        <a class="navbar-brand" href="#">
+            <center><img src="img/logo.png" class="img-fluid" width="200px"></center>
+        </a>
+    </nav>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <a onclick="parent.location='inicio.html'"><span style="color:white"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></span></a>
+            </div>
+            <div class="col">
+                <blockquote class="blockquote2">
+                    <h3><i class="fa fa-address-card" aria-hidden="true"></i> Información de Subscriptor</h3>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!--<blockquote class="blockquote2">
+                <h3>Info</h3>
+        </blockquote>-->
+    <br>
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-header">
+                Featured
+            </div>
+            <div class="card-block">
+                <h4 class="card-title">NOMBRE</h4>
+                <p class="card-text">info de usuario</p>
+                <a href="EditaInfoPersonal.html" class="btn btn-primary">EDITAR INFO**</a>
+            </div>
+            <div class="card-footer text-muted">
+                -------
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById("email").value = localStorage.getItem("Email");
+            //document.getElementById("nombre").value = localStorage.getItem("Nombre");
+            var nombre = localStorage.getItem("Nombre");
+            var res = nombre.split(" ");
+            document.getElementById("nombre").value = res[0];
+            document.getElementById("ApPat").value = res[1];
+        });
+    </script>
+</body>
+
+</html>
