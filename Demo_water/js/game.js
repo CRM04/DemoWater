@@ -159,7 +159,7 @@ $(document).ready(function(){
                             console.log("Cantidad de agua: " + cantidadAgua);
                             console.log("Tipo de Agua: " + typeof(Agua[indice]));
                             console.log("Tipo de Cantidad: " + typeof( cantidadAgua));
-                            alert( cantidadAgua);
+                            //alert( cantidadAgua);
                             console.log("Agua Temporal: " + aguaTemp);
                             Agua[indice] = cantidadAgua + Agua[indice];
                             console.log("Agua sumada: " + Agua);

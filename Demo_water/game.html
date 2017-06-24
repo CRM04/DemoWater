@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="format-detection" content="telephone=no"/>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!--<link rel="stylesheet" type="text/css" href="css/index.css"/>-->
-    <link rel="stylesheet" type="text/css" href = "css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href = "css/custom.css">    
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css"/>-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-  <meta name="msapplication-tap-highlight" content="no"/>
-  <title>Water</title>
+    <meta name="msapplication-tap-highlight" content="no" />
+    <title>Water</title>
 </head>
+
 <body>
     <nav class="navbar navbar-light" style="background-color: #10263e ;">
         <a class="navbar-brand" href="#">
             <center><img src="img/logo.png" class="img-fluid" width="200px"></center>
         </a>
-    </nav>    
+    </nav>
     <div class="container">
         <div class="row">
-                <div class="col-1">
-                    <span style="color:white"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></span>
-                </div>
-                <div class="col">
-                    <blockquote class="blockquote2">
-                        <h3>Consumo diario</h3>
-                    </blockquote>
-                </div>
+            <div class="col-1">
+                <a onclick="parent.location='meta.html'"> <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
             </div>
+            <div class="col">
+                <blockquote class="blockquote2">
+                    <h3>Consumo diario</h3>
+                </blockquote>
+            </div>
+        </div>
         <!--<blockquote class="blockquote2" style=" margin-top: 10%;">
                     <h3>Consumo diario</h3>
         </blockquote>    -->
@@ -39,21 +41,23 @@
                 <center><img id="up" class="img-fluid" src="img/game/up-arrow.png" style="margin-bottom: 30%; margin-top: 30%;"></center>
                 <!--<button id="reset" class="btn btn-secondary" type="button" >R</button>-->
             </div>
-            <div class="col">                
-            </div>            
+            <div class="col">
+            </div>
         </div>
     </div>
-    
-    <div class="container">         
+
+    <div class="container">
         <div class="row">
             <div class="col-3">
                 <br>
-                <img id = "izq" src="img/game/left-arrow.png" class="img-fluid" alt="Responsive image">
+                <img id="izq" src="img/game/left-arrow.png" class="img-fluid" alt="Responsive image">
             </div>
             <div id="centro" class="col-6">
-                <center><img id= "1" src="img/game/glass.png" class="img-fluid" alt="Responsive image"></center>
-                <center><img id= "2" src="img/game/water.png" style="display:none" class="img-fluid" alt="Responsive image"></center>
-                <center><h1 id = "cantidad"  style="color:white">1</h1></center>
+                <center><img id="1" src="img/game/glass.png" class="img-fluid" alt="Responsive image"></center>
+                <center><img id="2" src="img/game/water.png" style="display:none" class="img-fluid" alt="Responsive image"></center>
+                <center>
+                    <h1 id="cantidad" style="color:white">1</h1>
+                </center>
             </div>
             <div class="col-3">
                 <br>
@@ -66,19 +70,19 @@
             <div class="col-3">
                 <center><img id="down" class="img-fluid" src="img/game/down-arrow.png" style="margin-top: 30%"></center>
             </div>
-            <div class="col">                
-            </div>            
+            <div class="col">
+            </div>
         </div>
         <div class="row" style="margin-top: 10%">
             <div class="col">
                 <!--<a class="btn btn-primary btn-lg btn-block" href="grafico.html" role="button">Okay</a>-->
-                <button id="agregar" class="btn btn-secondary btn-lg btn-block" type="button" >Agregar</button>
-            </div>            
+                <button id="agregar" class="btn btn-secondary btn-lg btn-block" type="button">Agregar</button>
+            </div>
         </div>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sweetalert.min.js"></script>
-    <script src="js/game.js"></script>  
+    <script src="js/game.js"></script>
 </body>
 <html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/sweetalert2.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light" style="background-color: #10263e ;">
+        <a class="navbar-brand" href="#">
+            <center><img src="img/logo.png" class="img-fluid" width="200px"></center>
+        </a>
+    </nav>
+
+    <div class="container">
+
+        <blockquote class="blockquote2">
+            <h3>Agregar dirección</h3>
+        </blockquote>
+
+        <form>
+            <div class="form-group">
+                <label for="txtApodo">Apodo</label>
+                <input type="text" class="form-control" id="txtApodo" aria-describedby="txtApodo" placeholder="Casa de la abuela" required>
+            </div>
+
+            <div class="form-group">
+                <label for="txtCalle">Calle</label>
+                <input type="text" class="form-control" id="txtCalle" aria-describedby="txtCalle" placeholder="Escribe la calle." required>
+            </div>
+
+            <div class="form-group">
+                <label for="txtColonia">Colonia</label>
+                <input type="text" class="form-control" id="txtColonia" aria-describedby="txtColonia" placeholder="Escribe la colonia." required>
+            </div>
+
+            <div class="form-group">
+                <label for="txtCP">CP</label>
+                <input type="number" class="form-control" id="txtCP" aria-describedby="txtCP" placeholder="Escribe el códgo postal" required>
+            </div>
+
+            <div class="form-group">
+                <label for="txtEntre">Entre calles</label>
+                <input type="text" class="form-control" id="txtEntre" aria-describedby="txtEntre" placeholder="Escribe entre que calles." required>
+            </div>
+
+            <a role="button" type="submit" id="add" class="btn btn-info btn-block" href="#">Agregar</a>
+            <br>
+        </form>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/sweetalert2.js"></script>
+    <script src="js/guardarDir.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mostrar direcciones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/sweetalert2.css">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+    
+        <nav class="navbar navbar-light" style="background-color: #10263e ;">
+            <a class="navbar-brand" href="#">
+                <center><img src="img/logo.png" class="img-fluid" width="200px"></center>
+            </a>
+        </nav>
+
+        <div class="container">
+            
+            <blockquote class="blockquote2">
+                <h3>Direcciones almacenadas</h3>
+            </blockquote>
+            
+                <h4 id="error" style="display:none">
+                    No tienes direcciones guardadas.
+                </h4>
+
+                <div class="card" id="card1">
+                    <h3 id="dir1" class="card-header"></h3>
+                    <div class="card-block">
+                        <h4 class="card-title">Datos</h4>
+                        <p id="infoDir1"class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Modificar</a>
+                    </div>
+                </div>
+                <br>
+                <div class="card" id="card2">
+                    <h3 id="dir2" class="card-header"></h3>
+                    <div class="card-block">
+                        <h4 class="card-title">Datos</h4>
+                        <p id="infoDir2" class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Modificar</a>
+                    </div>
+                </div>            
+
+        </div>
+        
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/sweetalert2.js"></script>
+        <script src="js/obtenerDirs.js"></script>
+        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>    
+</html>

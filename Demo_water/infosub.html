@@ -22,7 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col-1">
-                <a onclick="parent.location='inicio.html'"><span style="color:white"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></span></a>
+                <a onclick="parent.location='inicio.html'"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
             </div>
             <div class="col">
                 <blockquote class="blockquote2">
@@ -38,28 +38,21 @@
     <br>
     <div class="container">
         <div class="card text-center">
-            <div class="card-header">
-                Featured
+            <div class="card-header ">
+                Subcripción agua alquimia
             </div>
             <div class="card-block">
-                <h4 class="card-title">NOMBRE</h4>
-                <p class="card-text">info de usuario</p>
-                <a href="EditaInfoPersonal.html" class="btn btn-primary">EDITAR INFO**</a>
-            </div>
-            <div class="card-footer text-muted">
-                -------
+                <h4 id="nombre" class="card-title"> </h4>
+                <p class="card-text">¿Ya te subscribiste? <br> Recibe agua alquimia semanalmente hasta la puerta de tu casa. </p>
+                <a href="EditaInfoPersonal.html" class="btn btn-info btn-lg">Subscribete aquí</a>
             </div>
         </div>
     </div>
     <script>
+        var name = localStorage.getItem("Nombre");
         document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById("email").value = localStorage.getItem("Email");
-            //document.getElementById("nombre").value = localStorage.getItem("Nombre");
-            var nombre = localStorage.getItem("Nombre");
-            var res = nombre.split(" ");
-            document.getElementById("nombre").value = res[0];
-            document.getElementById("ApPat").value = res[1];
-        });
+            document.getElementById("nombre").innerHTML += name;
+        }, false);
     </script>
 </body>
 
