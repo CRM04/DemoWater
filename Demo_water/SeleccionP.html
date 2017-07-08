@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Agua ALquimia</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light" style="background-color: #10263e ;">
+        <a class="navbar-brand" href="#">
+            <center><img src="img/logo.png" class="img-fluid" width="200px"></center>
+        </a>
+    </nav>
+
+    <div class="container">
+        
+        <div class="card" style="margin-top: 15px">
+            <div class="card-block">
+                <div class="row">
+                    <div class="col" >
+                        <h4>Tipo de agua: </h4>
+                    </div>
+                    <div class="col">
+                        <label class="switch" >
+                            <input type="checkbox" onclick="cambio()">
+                            <div class="slider round">
+                                <center style="margin-top:5px"><span id="tipo">Premiun</span></center>
+                            </div>
+                        </label>
+                    </div>            
+                </div>
+            </div>
+        </div>
+        <div id="Premiun">
+        <div class="card">
+            <!--<div class="card-header">
+                <h3 class="card-title">Garrafón</h3>
+            </div>-->
+            <div class="card-block">
+                
+                <div class="row">
+                    <div class="col">
+                        <figure>
+                            <center><img id="garrafon"src="img/productos/GP1.png" class="img-fluid" ></center>
+                            <center><figcaption>Garrafón de 20 Lts de agua</figcaption></center>
+                        </figure>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <center><h4>Cantidad</h4></center>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col">
+                                <img src="img/productos/menos.png" onclick="menos('Cantidad_garrafon', 'garrafon')" class="img-fluid agregar_menos" width="100%">
+                            </div>
+                            <div class="col">
+                                <center><h4 id="Cantidad_garrafon">0</h4></center>
+                            </div>
+                            <div class="col">
+                                <img  src="img/productos/mas.png" onclick="mas('Cantidad_garrafon','garrafon')" class="img-fluidr agregar_mas" width="100%">
+                            </div>                            
+                        </div>                        
+                    </div>           
+                </div>
+                <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+
+            
+        </div>
+
+        <div class="card">
+            <!--<div class="card-header">
+                <h3 class="card-title">Garrafón</h3>
+            </div>-->
+            <div class="card-block">
+                
+                <div class="row">
+                    <div class="col">
+                        <figure>
+                            <center><img src="img/productos/galon.png" class="img-fluid" ></center>
+                                <center><figcaption>Galón con 3.5 Lts de agua</figcaption></center>
+                        </figure>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <center><h4>Cantidad</h4></center>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col">
+                                <img src="img/productos/menos.png" onclick="menos('Cantidad_3_5')" class="img-fluid agrega_menos" width="100%">                                
+                            </div>
+                            <div class="col">
+                                <center><h4 id="Cantidad_3_5">0</h4></center>
+                            </div>
+                            <div class="col">
+                                <img src="img/productos/mas.png" onclick="mas('Cantidad_3_5')" class="img-fluid agregar_mas" width="100%">
+                            </div>                            
+                        </div>                        
+                    </div>           
+                </div>
+                <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+        </div>
+
+        <div class="card">
+            <!--<div class="card-header">
+                <h3 class="card-title">Garrafón</h3>
+            </div>-->
+            <div class="card-block">
+                
+                <div class="row">
+                    <div class="col">
+                        <figure>
+                            <center><img src="img/productos/1litroymedio.png" class="img-fluid" ></center>
+                                <center><figcaption>Botella con 1.5 Lts de agua</figcaption></center>
+                        </figure>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <center><h4>Cantidad</h4></center>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col">
+                                <img src="img/productos/menos.png" onclick="menos('Cantidad_1_5')" class="img-fluid agregar_menos" width="100%">                                
+                            </div>
+                            <div class="col">
+                                <center><h4 id="Cantidad_1_5">0</h4></center>
+                            </div>
+                            <div class="col">
+                                <img src="img/productos/mas.png" onclick="mas('Cantidad_1_5')" class="img-fluid agregar_mas" width="100%">
+                            </div>                            
+                        </div>                        
+                    </div>           
+                </div>
+                <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+        </div>
+
+        <div class="card">
+            <!--<div class="card-header">
+                <h3 class="card-title">Garrafón</h3>
+            </div>-->
+            <div class="card-block">
+                
+                <div class="row">
+                    <div class="col">
+                        <figure>
+                            <center><img src="img/productos/1litro.png" class="img-fluid" ></center>
+                                <center><figcaption>Botella con 1 Lts de agua</figcaption></center>
+                        </figure>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <center><h4>Cantidad</h4></center>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col">
+                                <img src="img/productos/menos.png" onclick="menos('Cantidad_1')" class="img-fluid agregar_menos" width="100%">                                
+                            </div>
+                            <div class="col">
+                                <center><h4 id="Cantidad_1">0</h4></center>
+                            </div>
+                            <div class="col">
+                                <img src="img/productos/mas.png" onclick="mas('Cantidad_1')" class="img-fluid agregar_mas" width="100%">
+                            </div>                            
+                        </div>                        
+                    </div>           
+                </div>
+                <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+        </div>
+
+        <div class="card">
+            <!--<div class="card-header">
+                <h3 class="card-title">Garrafón</h3>
+            </div>-->
+            <div class="card-block">
+                
+                <div class="row">
+                    <div class="col">
+                        <figure>
+                            <center><img src="img/productos/600.png" class="img-fluid" ></center>
+                                <center><figcaption>Paquete 600 ml de agua</figcaption></center>
+                        </figure>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <center><h4>Cantidad</h4></center>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col">
+                                <img src="img/productos/menos.png" onclick="menos('Cantidad_600')" class="img-fluid agregar_menos" width="100%">                                
+                            </div>
+                            <div class="col">
+                                <center><h4 id="Cantidad_600">0</h4></center>
+                            </div>
+                            <div class="col">
+                                <img src="img/productos/mas.png"onclick="mas('Cantidad_600')" class="img-fluid agregar_mas" width="100%">
+                            </div>                            
+                        </div>                        
+                    </div>           
+                </div>
+                <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+        </div>
+        </div>
+        <div id="CardsAlcalinas">
+            <div class="card">
+            <!--<div class="card-header">
+                <h3 class="card-title">Garrafón</h3>
+            </div>-->
+            <div class="card-block">
+                
+                <div class="row">
+                    <div class="col">
+                        <figure>
+                            <center><img src="img/productos/garrafa_antiox.png" class="img-fluid" ></center>
+                                <center><figcaption>Garrafón antioxidante 3.5 L</figcaption></center>
+                        </figure>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <center><h4>Cantidad</h4></center>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col">
+                                <img src="img/productos/menos.png" onclick="menos('garra_anti')" class="img-fluid agregar_menos" width="100%">                                
+                            </div>
+                            <div class="col">
+                                <center><h4 id="garra_anti">0</h4></center>
+                            </div>
+                            <div class="col">
+                                <img src="img/productos/mas.png"onclick="mas('garra_anti')" class="img-fluid agregar_mas" width="100%">
+                            </div>                            
+                        </div>                        
+                    </div>           
+                </div>
+                <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+        </div>
+        <div class="card">
+            <!--<div class="card-header">
+                <h3 class="card-title">Garrafón</h3>
+            </div>-->
+            <div class="card-block">
+                
+                <div class="row">
+                    <div class="col">
+                        <figure>
+                            <center><img src="img/productos/packantiox_unoymedio.png" class="img-fluid" ></center>
+                                <center><figcaption>Paquete antioxidante 1.5 L</figcaption></center>
+                        </figure>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <center><h4>Cantidad</h4></center>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col">
+                                <img src="img/productos/menos.png" onclick="menos('antioxidante_1_5')" class="img-fluid agregar_menos" width="100%">                                
+                            </div>
+                            <div class="col">
+                                <center><h4 id="antioxidante_1_5">0</h4></center>
+                            </div>
+                            <div class="col">
+                                <img src="img/productos/mas.png"onclick="mas('antioxidante_1_5')" class="img-fluid agregar_mas" width="100%">
+                            </div>                            
+                        </div>                        
+                    </div>           
+                </div>
+                <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+
+        </div>
+        <div class="card">
+            <!--<div class="card-header">
+                <h3 class="card-title">Garrafón</h3>
+            </div>-->
+            <div class="card-block">
+                
+                <div class="row">
+                    <div class="col">
+                        <figure>
+                            <center><img src="img/productos/packantiox_unoymedio.png" class="img-fluid" ></center>
+                                <center><figcaption>Paquete antioxidante 1L</figcaption></center>
+                        </figure>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <center><h4>Cantidad</h4></center>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col">
+                                <img src="img/productos/menos.png" onclick="menos('antioxidante_1')" class="img-fluid agregar_menos" width="100%">                                
+                            </div>
+                            <div class="col">
+                                <center><h4 id="antioxidante_1">0</h4></center>
+                            </div>
+                            <div class="col">
+                                <img src="img/productos/mas.png"onclick="mas('antioxidante_1')" class="img-fluid agregar_mas" width="100%">
+                            </div>                            
+                        </div>                        
+                    </div>           
+                </div>
+                <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+        </div>
+        <div class="card">
+            <!--<div class="card-header">
+                <h3 class="card-title">Garrafón</h3>
+            </div>-->
+            <div class="card-block">
+                
+                <div class="row">
+                    <div class="col">
+                        <figure>
+                            <center><img src="img/productos/packantiox_unoymedio.png" class="img-fluid" ></center>
+                                <center><figcaption>Paquete antioxidante de 600ml</figcaption></center>
+                        </figure>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <center><h4>Cantidad</h4></center>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col">
+                                <img src="img/productos/menos.png" onclick="menos('600_anti')" class="img-fluid agregar_menos" width="100%">                                
+                            </div>
+                            <div class="col">
+                                <center><h4 id="600_anti">0</h4></center>
+                            </div>
+                            <div class="col">
+                                <img src="img/productos/mas.png"onclick="mas('600_anti')" class="img-fluid agregar_mas" width="100%">
+                            </div>                            
+                        </div>                        
+                    </div>           
+                </div>
+                <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+
+        </div>
+            
+
+        
+    </div>    
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<script type="text/javascript">
+    $('#CardsAlcalinas').hide();
+
+    function mas(id_boton, id){
+        var num = parseInt($('#'+id_boton).text());    
+        if(num < 10){
+            num ++;
+        }
+        $('#'+id_boton).text(num);
+        if(num < 5){
+           $("#"+id).attr("src","img/productos/GP"+num+".png");
+        }
+        console.log(num);
+    }
+
+    function menos(id_boton, id){
+        var num = parseInt($('#'+id_boton).text());
+        if(num > 0){
+            num --;
+        }
+         if(num < 5 && num > 0){
+            $("#"+id).attr("src","img/productos/GP"+num+".png");
+        }
+        $('#'+id_boton).text(num);
+    }
+
+    function cambio(){
+        console.log("cambio: "+ $('#tipo').text());
+        if($('#tipo').text() == "Premiun"){
+            $('#tipo').text("Alcalina");
+            $('#tipo').css("color", "white");
+            $('#CardsAlcalinas').show(300);
+            $('#Premiun').hide(300);            
+            
+        }else{
+            $('#tipo').text("Premiun");
+            $('#tipo').css("color","black");
+            $('#CardsAlcalinas').hide(300);
+            $('#Premiun').show(300);
+        }
+    }
+
+    function CardsAlcalinas(){
+
+    }
+    
+</script>
+
+</html>
